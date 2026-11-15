@@ -225,6 +225,39 @@ a:hover {
   max-width: 30ch;
 }
 
+/* ---------- Photos ---------- */
+
+.hero-photo {
+  width: min(100%, 20rem);
+  margin: 1.75rem auto 0;
+}
+
+.hero-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  border: 1px solid rgba(231, 217, 196, 0.9);
+  box-shadow: var(--shadow);
+}
+
+.card-photo {
+  margin: 0 0 1.1rem;
+}
+
+.card-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  background: var(--cream-deep, #f6ecd9);
+}
+
+.card-photo--square {
+  width: min(100%, 20rem);
+  margin-inline: auto;
+}
+
 /* ---------- Menu ---------- */
 
 .menu {
