@@ -455,6 +455,31 @@ a:hover {
   box-shadow: 0 10px 20px -10px rgba(90, 51, 24, 0.8);
 }
 
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1.1rem;
+}
+
+.contact-actions .call-button {
+  margin-top: 0;
+}
+
+.hero-actions {
+  justify-content: center;
+  margin-top: 1.6rem;
+}
+
+.call-button--whatsapp {
+  background: linear-gradient(145deg, #12855f, #0b6b52);
+  box-shadow: 0 6px 16px -8px rgba(11, 107, 82, 0.7);
+}
+
+.call-button--whatsapp:hover {
+  box-shadow: 0 10px 20px -10px rgba(11, 107, 82, 0.85);
+}
+
 /* ---------- Footer ---------- */
 
 .site-footer {
