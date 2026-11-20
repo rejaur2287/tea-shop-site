@@ -313,8 +313,8 @@ a:hover {
 
 .menu-list li {
   display: flex;
-  align-items: baseline;
-  gap: 0.6rem;
+  align-items: center;
+  gap: 0.55rem;
   padding-block: 0.55rem;
 }
 
@@ -323,6 +323,7 @@ a:hover {
 }
 
 .menu-list .item {
+  min-width: 0;
   font-size: 1.02rem;
   font-weight: 500;
 }
@@ -335,6 +336,80 @@ a:hover {
   font-weight: 700;
   color: var(--brown-dark);
   white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Order picker ---------- */
+
+.qty-control {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.qty-btn {
+  display: grid;
+  place-items: center;
+  width: 1.7rem;
+  height: 1.7rem;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--card);
+  color: var(--brown-dark);
+  font-family: inherit;
+  font-size: 1.05rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.qty-btn:hover:not(:disabled) {
+  background: rgba(122, 74, 36, 0.08);
+  border-color: rgba(122, 74, 36, 0.45);
+}
+
+.qty-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.menu-list .qty {
+  min-width: 1.3rem;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.order-total {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.2rem 1rem;
+  margin-top: 1.1rem;
+  padding: 0.85rem 1.3rem;
+  border-radius: var(--radius);
+  background: linear-gradient(145deg, var(--brown), var(--brown-dark));
+  color: #fffdf8;
+  box-shadow: 0 10px 22px -14px rgba(90, 51, 24, 0.85);
+}
+
+.order-total p {
+  margin: 0;
+}
+
+.order-total-label {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.order-total-value {
+  font-size: 1.05rem;
+  font-weight: 700;
   font-variant-numeric: tabular-nums;
 }
 
@@ -532,7 +607,9 @@ a:hover {
   .site-header,
   .site-footer,
   .skip-link,
-  .call-button {
+  .call-button,
+  .qty-control,
+  .order-total {
     display: none;
   }
 
